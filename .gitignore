@@ -1,0 +1,23 @@
+
+# dependencies
+/node_modules
+
+# Editor configs
+.vscode
+.vs
+.idea
+*.swp
+*.code-workspace
+
+# misc
+.DS_Store
+.*.local
+
+*.log
+*.log.*
+
+# environment variables
+.env
+
+# pact logs
+/pact
