@@ -1,1 +1,2 @@
-export { default as books } from './books';
+export { default as getPoliceForce } from './getPoliceForce';
+export { default as getPoliceForces } from './getPoliceForces';

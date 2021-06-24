@@ -1,20 +1,43 @@
 import { makeExecutableSchema, gql } from 'apollo-server';
 
-import { books } from './resolvers';
+import { getPoliceForce, getPoliceForces } from './resolvers';
 
-import * as types from './types';
+const types = gql`
+   type EngagementMethod {
+    url: String
+    type: String
+    description: String
+    title: String
+  }
 
-const Query = gql`
-  type Query {
-    books: [Book]
+  type PoliceForce {
+    id: ID
+    description: String
+    url: String
+    engagement_methods: [EngagementMethod]
+    telephone: String
+    name: String
+  }
+
+  type BasicPoliceForceInfo {
+    id: ID
+    name: String
   }
 `;
 
-const typeDefs = [Query, ...Object.entries(types).map(e => e[1])];
+const Query = gql`
+  type Query {
+    getPoliceForce(id: ID): PoliceForce
+    getPoliceForces: [BasicPoliceForceInfo]
+  }
+`;
+
+const typeDefs = [Query, types];
 
 const resolvers = {
   Query: {
-    books,
+    getPoliceForce,
+    getPoliceForces,
   },
 };
 

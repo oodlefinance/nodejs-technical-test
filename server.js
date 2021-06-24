@@ -1,8 +1,14 @@
 const { ApolloServer } = require('apollo-server');
 
+import PoliceForcesAPI from './dataSources/PoliceForcesAPI.js';
 import schema from './schema';
 
 const server = new ApolloServer({ 
+  dataSources: () => {
+    return {
+      PoliceForcesAPI: new PoliceForcesAPI(),
+    };
+  },
   schema,
   introspection: true, 
   playground: true,
