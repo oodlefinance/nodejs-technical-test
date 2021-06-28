@@ -1,4 +1,4 @@
-const { ApolloServer } = require('apollo-server');
+import { ApolloServer } from 'apollo-server';
 
 import PoliceForcesAPI from './dataSources/PoliceForcesAPI.js';
 import schema from './schema';
