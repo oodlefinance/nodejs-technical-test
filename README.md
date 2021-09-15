@@ -49,7 +49,7 @@ When they make a `getPoliceForces` query, they'd like to see details of any stop
 If you find the above requirements easy to solve, feel free to challenge yourself to go beyond the spec!
 
 Some ideas:
-- If you know of any other APIs that might play nicely with this data, feel free to include them.
+- Show some evidence of documentation
 - Think you can elegantly handle the API usage limits? Give it a go!
 - Calculate some helpful metadata for each force, such as; avg number of arrests per month, most common legislation cited, etc.
 
